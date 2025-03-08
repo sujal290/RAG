@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RAG PDF Chatbot</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+        #chat-container {
+            width: 50%;
+            margin: auto;
+        }
+        input {
+            width: 80%;
+            padding: 10px;
+            margin-top: 20px;
+        }
+        button {
+            padding: 10px 15px;
+            margin-left: 10px;
+            cursor: pointer;
+        }
+        #output {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            min-height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h1>RAG PDF Chatbot</h1>
+    <div id="chat-container">
+        <input type="text" id="user-input" placeholder="Ask a question...">
+        <button onclick="sendQuery()">Enter</button>
+        <div id="output"></div>
+    </div>
+    <script>
+        function sendQuery() {
+            var query = document.getElementById("user-input").value;
+            if (query.trim() === "") return;
+            document.getElementById("output").innerHTML = "Thinking...";
+            
+            // Simulate API request (replace with actual API call)
+            setTimeout(() => {
+                document.getElementById("output").innerHTML = "Response for: " + query;
+            }, 1000);
+        }
+    </script>
+</body>
+</html>
