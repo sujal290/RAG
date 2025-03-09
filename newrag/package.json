@@ -1,0 +1,11 @@
+{
+  "name": "your-project",
+  "version": "1.0.0",
+  "dependencies": {
+    "axios": "^1.8.2"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "dev": "vite"
+  }
+}
